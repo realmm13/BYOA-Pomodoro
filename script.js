@@ -25,7 +25,18 @@ function toggleMode() {
     isWorkTime = !isWorkTime;
     timeLeft = isWorkTime ? WORK_TIME : BREAK_TIME;
     statusText.textContent = isWorkTime ? 'Work Time' : 'Break Time';
-    modeToggleButton.textContent = isWorkTime ? 'Rest Time' : 'Work Time';
+    
+    const toggleIcon = modeToggleButton.querySelector('.toggle-icon');
+    toggleIcon.textContent = isWorkTime ? '☀️' : '🌙';
+    
+    if (isWorkTime) {
+        modeToggleButton.classList.add('work-mode');
+        modeToggleButton.classList.remove('break-mode');
+    } else {
+        modeToggleButton.classList.add('break-mode');
+        modeToggleButton.classList.remove('work-mode');
+    }
+    
     updateDisplay();
 }
 

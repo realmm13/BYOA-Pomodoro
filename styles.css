@@ -1,7 +1,7 @@
 /* Modern color palette */
 :root {
-  --primary: purple;
-  --primary-dark: #4555EA;
+  --primary: #3B8F8B;
+  --primary-dark: #2B6B68;
   --secondary: #FF6B6B;
   --secondary-dark: #FF5252;
   --background: #F8F9FD;
@@ -133,33 +133,19 @@ h1 {
 }
 
 .toggle-switch {
-    background-color: var(--surface) !important;
-    border: 2px solid var(--primary) !important;
-    width: 80px;
-    height: 36px;
-    border-radius: 18px !important;
-    padding: 4px !important;
-    position: relative;
-    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    border-radius: 50% !important;
+    padding: 8px !important;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .toggle-icon {
     font-size: 1.2rem;
-    z-index: 1;
-}
-
-.toggle-switch::after {
-    content: '';
-    position: absolute;
-    left: 4px;
-    width: 28px;
-    height: 28px;
-    background-color: var(--primary);
-    border-radius: 50%;
-    transition: all 0.3s ease;
 }
 
 .toggle-switch.break-mode {
