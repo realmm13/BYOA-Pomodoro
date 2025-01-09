@@ -4,11 +4,11 @@
   --primary-dark: #2B6B68;
   --secondary: #FF6B6B;
   --secondary-dark: #FF5252;
-  --background: #F8F9FD;
+  --background: #1E2023;
   --surface: #FFFFFF;
-  --text: #2D3436;
-  --text-secondary: #636E72;
-  --shadow: rgba(91, 107, 249, 0.1);
+  --text: #1E2023;
+  --text-secondary: #4A4D51;
+  --shadow: rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -27,7 +27,7 @@ body {
   background-color: var(--surface);
   padding: 3rem;
   border-radius: 24px;
-  box-shadow: 0 12px 32px var(--shadow);
+  box-shadow: 0 16px 40px var(--shadow);
   max-width: 400px;
   width: 90%;
 }
@@ -130,6 +130,7 @@ h1 {
 
 .header h1 {
     margin: 0;
+    color: var(--text);
 }
 
 .toggle-switch {
