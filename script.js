@@ -10,6 +10,7 @@ const resetButton = document.getElementById('reset');
 const statusText = document.getElementById('status-text');
 const modeToggleButton = document.getElementById('mode-toggle');
 const resumeButton = document.getElementById('resume');
+const addMinuteButton = document.getElementById('add-minute');
 
 const WORK_TIME = 25 * 60; // 25 minutes in seconds
 const BREAK_TIME = 5 * 60; // 5 minutes in seconds
@@ -90,12 +91,19 @@ function resetTimer() {
     resumeButton.classList.add('hidden');
 }
 
+function addOneMinute() {
+    if (timerId !== null) {  // Only allow adding time while timer is running
+        timeLeft += 60;  // Add 60 seconds
+        updateDisplay();
+    }
+}
 
 startButton.addEventListener('click', startTimer);
 pauseButton.addEventListener('click', pauseTimer);
 resetButton.addEventListener('click', resetTimer);
 modeToggleButton.addEventListener('click', toggleMode);
 resumeButton.addEventListener('click', startTimer);
+addMinuteButton.addEventListener('click', addOneMinute);
 
 // Initialize the display
 resetTimer(); 
